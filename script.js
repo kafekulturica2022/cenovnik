@@ -2,13 +2,16 @@
 function changeLanguage(language, action) {
     // Update text content
     if (language === 'en') {
+        document.getElementById('akcijaText').innerText = 'Special Offers';
         document.getElementById('aperitiviText').innerText = 'Aperitifs and Liqueurs';
+        document.getElementById('likeriText').innerText = 'Liqueurs';
         document.getElementById('rakijeText').innerText = 'Brandies';
         document.getElementById('vinaText').innerText = 'Wines';
         document.getElementById('pivaText').innerText = 'Beers';
         document.getElementById('tocenopivoText').innerText = 'Draft Beer';
         document.getElementById('toplinapiciText').innerText = 'Hot Drinks';
         document.getElementById('sokoviText').innerText = 'Juices';
+        document.getElementById('energetskaText').innerText = 'Energy Drinks';
         document.getElementById('cedjenisokoviText').innerText = 'Fresh Juices';
         document.getElementById('vodaText').innerText = 'Water';
         document.getElementById('viskiText').innerText = 'Whiskey';
@@ -16,16 +19,19 @@ function changeLanguage(language, action) {
         document.getElementById('grickaliceText').innerText = 'Snacks';
         document.getElementById('digmeni').innerText = 'Digital Menu';
         document.getElementById('napomena').innerHTML = '<strong>Note:</strong> <em>Prices are in Serbian Dinars (RSD).</em>';
-        document.querySelector('.copyright').innerHTML = '&copy; 2024 Cafe Kulturica - Your favorite spot.';
+        document.querySelector('.copyright').innerHTML = '&copy; 2026 Cafe Kulturica - Your favorite spot.';
         document.title = 'Cafe Kulturica - Digital Menu';
     } else if (language === 'sr') {
+        document.getElementById('akcijaText').innerText = 'Akcija';
         document.getElementById('aperitiviText').innerText = 'Žestoka pića';
+        document.getElementById('likeriText').innerText = 'Likeri';
         document.getElementById('rakijeText').innerText = 'Rakije';
         document.getElementById('vinaText').innerText = 'Vina';
         document.getElementById('pivaText').innerText = 'Piva';
         document.getElementById('tocenopivoText').innerText = 'Točeno pivo';
-        document.getElementById('toplinapiciText').innerText = 'Topli Napici';
+        document.getElementById('toplinapiciText').innerText = 'Topli napici';
         document.getElementById('sokoviText').innerText = 'Sokovi';
+        document.getElementById('energetskaText').innerText = 'Energetska pića';
         document.getElementById('cedjenisokoviText').innerText = 'Ceđeni sokovi';
         document.getElementById('vodaText').innerText = 'Voda';
         document.getElementById('viskiText').innerText = 'Viski';
@@ -33,7 +39,7 @@ function changeLanguage(language, action) {
         document.getElementById('grickaliceText').innerText = 'Grickalice';
         document.getElementById('digmeni').innerText = 'Digitalni Meni';
         document.getElementById('napomena').innerHTML = '<strong>Napomena:</strong> <em>Cene su izražene u dinarima (RSD).</em>';
-        document.querySelector('.copyright').innerHTML = '&copy; 2024 Kafe Kulturica - Vaša omiljena lokacija.';
+        document.querySelector('.copyright').innerHTML = '&copy; 2026 Kafe Kulturica - Vaša omiljena lokacija.';
         document.title = 'Kafe Kulturica - Digitalni Meni';
     }
 
@@ -63,6 +69,20 @@ document.addEventListener('DOMContentLoaded', function() {
 const menuData = {
     "categories": [
         {
+            "name": "Akcija",
+            "items": [
+                { "name": "Espreso + Cedevita", "price": "280 RSD" },
+                { "name": "Espreso + Krstić šljiva", "price": "290 RSD" }
+            ]
+        },
+        {
+            "name": "Special Offers",
+            "items": [
+                { "name": "Espresso + Cedevita", "price": "280 RSD" },
+                { "name": "Espresso + Krstić Plum", "price": "290 RSD" }
+            ]
+        },
+        {
             "name": "Žestoka pića",
             "items": [
                 { "name": "Tequila 0,03l", "price": "290 RSD" },
@@ -89,6 +109,22 @@ const menuData = {
             ]
         },
         {
+            "name": "Likeri",
+            "items": [
+                { "name": "Baileys 0,03l", "price": "310 RSD" },
+                { "name": "Krstić Malina 0,03l", "price": "210 RSD" },
+                { "name": "Krstić Višnja 0,03l", "price": "210 RSD" }
+            ]
+        },
+        {
+            "name": "Liqueurs",
+            "items": [
+                { "name": "Baileys 0.03l", "price": "310 RSD" },
+                { "name": "Krstić Raspberry 0.03l", "price": "210 RSD" },
+                { "name": "Krstić Sour Cherry 0.03l", "price": "210 RSD" }
+            ]
+        },
+        {
             "name": "Rakije",
             "items": [
                 { "name": "Krstić šljiva 0,03l", "price": "210 RSD" },
@@ -109,7 +145,11 @@ const menuData = {
                 { "name": "Sremica dunja 0,03l", "price": "290 RSD" },
                 { "name": "Sremica šljiva 0,03l", "price": "270 RSD" },
                 { "name": "Sremica kajsija 0,03l", "price": "270 RSD" },
-                { "name": "Sremica kruška 0,03l", "price": "270 RSD" }
+                { "name": "Sremica kruška 0,03l", "price": "270 RSD" },
+                { "name": "Jezdić Šljiva 0,03l", "price": "320 RSD" },
+                { "name": "Jezdić Dunja 0,03l", "price": "320 RSD" },
+                { "name": "Bukovska Šljiva 0,03l", "price": "290 RSD" },
+                { "name": "Tamjanika loza 0,03l", "price": "270 RSD" }
             ]
         },
         {
@@ -133,7 +173,11 @@ const menuData = {
                 { "name": "Sremica Quince 0.03l", "price": "290 RSD" },
                 { "name": "Sremica Plum 0.03l", "price": "270 RSD" },
                 { "name": "Sremica Apricot 0.03l", "price": "270 RSD" },
-                { "name": "Sremica Pear 0.03l", "price": "270 RSD" }
+                { "name": "Sremica Pear 0.03l", "price": "270 RSD" },
+                { "name": "Jezdić Plum 0.03l", "price": "320 RSD" },
+                { "name": "Jezdić Quince 0.03l", "price": "320 RSD" },
+                { "name": "Bukovska Plum 0.03l", "price": "290 RSD" },
+                { "name": "Tamjanika Grape 0.03l", "price": "270 RSD" }
             ]
         },
         {
@@ -142,9 +186,14 @@ const menuData = {
                 { "name": "Kupinovo vino 0,187l", "price": "320 RSD" },
                 { "name": "Sangria 0,187l", "price": "310 RSD" },
                 { "name": "Knežević belo vino 0,1l", "price": "160 RSD" },
+                { "name": "Knežević belo vino 0,5l", "price": "800 RSD" },
                 { "name": "Knežević belo vino 1L", "price": "1600 RSD" },
                 { "name": "Knežević crno vino 0,1l", "price": "160 RSD" },
-                { "name": "Knežević crno vino 1L", "price": "1600 RSD" }
+                { "name": "Knežević crno vino 0,5l", "price": "800 RSD" },
+                { "name": "Knežević crno vino 1L", "price": "1600 RSD" },
+                { "name": "Cabernet Sauvignon 0,187l", "price": "310 RSD" },
+                { "name": "Bambus 0,3l", "price": "240 RSD" },
+                { "name": "Špricer 0,3l", "price": "240 RSD" }
             ]
         },
         {
@@ -153,9 +202,14 @@ const menuData = {
                 { "name": "Blackberry Wine 0.187l", "price": "320 RSD" },
                 { "name": "Sangria 0.187l", "price": "310 RSD" },
                 { "name": "Knežević White Wine 0.1l", "price": "160 RSD" },
+                { "name": "Knežević White Wine 0.5l", "price": "800 RSD" },
                 { "name": "Knežević White Wine 1L", "price": "1600 RSD" },
                 { "name": "Knežević Red Wine 0.1l", "price": "160 RSD" },
-                { "name": "Knežević Red Wine 1L", "price": "1600 RSD" }
+                { "name": "Knežević Red Wine 0.5l", "price": "800 RSD" },
+                { "name": "Knežević Red Wine 1L", "price": "1600 RSD" },
+                { "name": "Cabernet Sauvignon 0.187l", "price": "310 RSD" },
+                { "name": "Bambus 0.3l", "price": "240 RSD" },
+                { "name": "Spritzer 0.3l", "price": "240 RSD" }
             ]
         },
         {
@@ -167,7 +221,8 @@ const menuData = {
                 { "name": "Tuborg 0,33l", "price": "260 RSD" },
                 { "name": "Lav premium 0,33l", "price": "240 RSD" },
                 { "name": "Carlsberg 0,25l", "price": "290 RSD" },
-                { "name": "Zbir 0,5l", "price": "350 RSD" }
+                { "name": "Zbir 0,5l", "price": "350 RSD" },
+                { "name": "Somersby 0,33l", "price": "290 RSD" }
             ]
         },
         {
@@ -179,7 +234,8 @@ const menuData = {
                 { "name": "Tuborg 0.33l", "price": "260 RSD" },
                 { "name": "Lav Premium 0.33l", "price": "240 RSD" },
                 { "name": "Carlsberg 0.25l", "price": "290 RSD" },
-                { "name": "Zbir 0.5l", "price": "350 RSD" }
+                { "name": "Zbir 0.5l", "price": "350 RSD" },
+                { "name": "Somersby 0.33l", "price": "290 RSD" }
             ]
         },
         {
@@ -217,11 +273,13 @@ const menuData = {
             ]
         },
         {
-            "name": "Topli Napici",
+            "name": "Topli napici",
             "items": [
                 { "name": "Espresso", "price": "170 RSD" },
                 { "name": "Espresso sa mlekom", "price": "180 RSD" },
                 { "name": "Espresso sa sojinim mlekom", "price": "190 RSD" },
+                { "name": "Espresso sa ukusom vanile", "price": "220 RSD" },
+                { "name": "Espresso sa ukusom karamele", "price": "220 RSD" },
                 { "name": "Caffe latte", "price": "210 RSD" },
                 { "name": "Cappuccino", "price": "190 RSD" },
                 { "name": "Nescafe", "price": "190 RSD" },
@@ -237,6 +295,8 @@ const menuData = {
                 { "name": "Espresso", "price": "170 RSD" },
                 { "name": "Espresso with Milk", "price": "180 RSD" },
                 { "name": "Espresso with Soy Milk", "price": "190 RSD" },
+                { "name": "Espresso with Vanilla Flavor", "price": "220 RSD" },
+                { "name": "Espresso with Caramel Flavor", "price": "220 RSD" },
                 { "name": "Caffe Latte", "price": "210 RSD" },
                 { "name": "Cappuccino", "price": "190 RSD" },
                 { "name": "Nescafe", "price": "190 RSD" },
@@ -288,6 +348,20 @@ const menuData = {
                 { "name": "Peach Juice 0.2l", "price": "230 RSD" },
                 { "name": "Blueberry Juice 0.2l", "price": "230 RSD" },
                 { "name": "Cedevita 0.25l", "price": "210 RSD" }
+            ]
+        },
+        {
+            "name": "Energetska pića",
+            "items": [
+                { "name": "Red Bull lim. 0,25l", "price": "310 RSD" },
+                { "name": "Ultra lim. 0,25l", "price": "210 RSD" }
+            ]
+        },
+        {
+            "name": "Energy Drinks",
+            "items": [
+                { "name": "Red Bull lim. 0.25l", "price": "310 RSD" },
+                { "name": "Ultra lim. 0.25l", "price": "210 RSD" }
             ]
         },
         {
