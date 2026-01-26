@@ -54,8 +54,14 @@ function changeLanguage(language, action) {
     });
 
     localStorage.setItem('selectedLanguage', language);
+    
+    // Refresh menu items without page reload
     if (action === 'promeni') {
-        location.reload();
+        // Close all open submenus
+        document.querySelectorAll('.menu-item.active').forEach(item => {
+            item.classList.remove('active');
+            item.querySelector('.submenu').style.maxHeight = '0';
+        });
     }
 }
 
