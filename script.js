@@ -7,6 +7,7 @@ function changeLanguage(language, action) {
         document.getElementById('likeriText').innerText = 'Liqueurs';
         document.getElementById('rakijeText').innerText = 'Brandies';
         document.getElementById('vinaText').innerText = 'Wines';
+        document.getElementById('buteljkeText').innerText = 'Bottled Wines';
         document.getElementById('pivaText').innerText = 'Beers';
         document.getElementById('tocenopivoText').innerText = 'Draft Beer';
         document.getElementById('toplinapiciText').innerText = 'Hot Drinks';
@@ -27,6 +28,7 @@ function changeLanguage(language, action) {
         document.getElementById('likeriText').innerText = 'Likeri';
         document.getElementById('rakijeText').innerText = 'Rakije';
         document.getElementById('vinaText').innerText = 'Vina';
+        document.getElementById('buteljkeText').innerText = 'Buteljke vina';
         document.getElementById('pivaText').innerText = 'Piva';
         document.getElementById('tocenopivoText').innerText = 'Točeno pivo';
         document.getElementById('toplinapiciText').innerText = 'Topli napici';
@@ -191,6 +193,12 @@ const menuData = {
                 { "name": "Knežević crno vino 0,1l", "price": "160 RSD" },
                 { "name": "Knežević crno vino 0,5l", "price": "800 RSD" },
                 { "name": "Knežević crno vino 1L", "price": "1600 RSD" },
+                { "name": "Rose Kosović 0,1l", "price": "170 RSD" },
+                { "name": "Rose Kosović 0,5l", "price": "850 RSD" },
+                { "name": "Rose Kosović 1L", "price": "1700 RSD" },
+                { "name": "Grašac Kosović belo 0,1l", "price": "170 RSD" },
+                { "name": "Grašac Kosović belo 0,5l", "price": "850 RSD" },
+                { "name": "Grašac Kosović belo 1L", "price": "1700 RSD" },
                 { "name": "Cabernet Sauvignon 0,187l", "price": "310 RSD" },
                 { "name": "Bambus 0,3l", "price": "240 RSD" },
                 { "name": "Špricer 0,3l", "price": "240 RSD" }
@@ -207,9 +215,33 @@ const menuData = {
                 { "name": "Knežević Red Wine 0.1l", "price": "160 RSD" },
                 { "name": "Knežević Red Wine 0.5l", "price": "800 RSD" },
                 { "name": "Knežević Red Wine 1L", "price": "1600 RSD" },
+                { "name": "Rose Kosović 0.1l", "price": "170 RSD" },
+                { "name": "Rose Kosović 0.5l", "price": "850 RSD" },
+                { "name": "Rose Kosović 1L", "price": "1700 RSD" },
+                { "name": "Grašac Kosović White 0.1l", "price": "170 RSD" },
+                { "name": "Grašac Kosović White 0.5l", "price": "850 RSD" },
+                { "name": "Grašac Kosović White 1L", "price": "1700 RSD" },
                 { "name": "Cabernet Sauvignon 0.187l", "price": "310 RSD" },
                 { "name": "Bambus 0.3l", "price": "240 RSD" },
                 { "name": "Spritzer 0.3l", "price": "240 RSD" }
+            ]
+        },
+        {
+            "name": "Buteljke vina",
+            "items": [
+                { "name": "Bermet crni 0,75l", "price": "2900 RSD" },
+                { "name": "Bermet beli 0,75l", "price": "2900 RSD" },
+                { "name": "Rose 0,75l", "price": "2100 RSD" },
+                { "name": "Grašac beli 0,75l", "price": "2100 RSD" }
+            ]
+        },
+        {
+            "name": "Bottled Wines",
+            "items": [
+                { "name": "Bermet Red 0.75l", "price": "2900 RSD" },
+                { "name": "Bermet White 0.75l", "price": "2900 RSD" },
+                { "name": "Rose 0.75l", "price": "2100 RSD" },
+                { "name": "Grašac White 0.75l", "price": "2100 RSD" }
             ]
         },
         {
@@ -251,6 +283,8 @@ const menuData = {
                 { "name": "Beogradski fantom 0,3l", "price": "300 RSD" },
                 { "name": "Memento mori 0,5l", "price": "350 RSD" },
                 { "name": "Memento mori 0,3l", "price": "300 RSD" },
+                { "name": "Crni Slager 0,5l", "price": "270 RSD" },
+                { "name": "Crni Slager 0,3l", "price": "220 RSD" },
                 { "name": "Kulturica specijal 0,5l", "price": "230 RSD" },
                 { "name": "Kulturica specijal 0,3l", "price": "190 RSD" }
             ]
@@ -268,6 +302,8 @@ const menuData = {
                 { "name": "Belgrade Phantom 0.3l", "price": "300 RSD" },
                 { "name": "Memento Mori 0.5l", "price": "350 RSD" },
                 { "name": "Memento Mori 0.3l", "price": "300 RSD" },
+                { "name": "Crni Slager 0.5l", "price": "270 RSD" },
+                { "name": "Crni Slager 0.3l", "price": "220 RSD" },
                 { "name": "Kulturica Special 0.5l", "price": "230 RSD" },
                 { "name": "Kulturica Special 0.3l", "price": "190 RSD" }
             ]
