@@ -141,8 +141,8 @@ const menuData = {
                 { "name": "Krstić dunja 0,03l", "price": "220 RSD" },
                 { "name": "Krstić viljamovka 0,03l", "price": "220 RSD" },
                 { "name": "Krstić jabuka 0,03l", "price": "190 RSD" },
-                { "name": "Krstić malina 0,03l", "price": "210 RSD" },
-                { "name": "Krstić višnja 0,03l", "price": "210 RSD" },
+                // { "name": "Krstić malina 0,03l", "price": "210 RSD" },
+                // { "name": "Krstić višnja 0,03l", "price": "210 RSD" },
                 { "name": "Kovilj dunja 0,03l", "price": "320 RSD" },
                 { "name": "Kovilj šljiva 0,03l", "price": "310 RSD" },
                 { "name": "Jelički dukat šljiva 0,03l", "price": "430 RSD" },
@@ -169,8 +169,8 @@ const menuData = {
                 { "name": "Krstić Quince 0.03l", "price": "220 RSD" },
                 { "name": "Krstić Williams Pear 0.03l", "price": "220 RSD" },
                 { "name": "Krstić Apple 0.03l", "price": "190 RSD" },
-                { "name": "Krstić Raspberry 0.03l", "price": "210 RSD" },
-                { "name": "Krstić Sour Cherry 0.03l", "price": "210 RSD" },
+                // { "name": "Krstić Raspberry 0.03l", "price": "210 RSD" },
+                // { "name": "Krstić Sour Cherry 0.03l", "price": "210 RSD" },
                 { "name": "Kovilj Quince 0.03l", "price": "320 RSD" },
                 { "name": "Kovilj Plum 0.03l", "price": "310 RSD" },
                 { "name": "Jelički Dukat Plum 0.03l", "price": "430 RSD" },
@@ -328,6 +328,7 @@ const menuData = {
                 { "name": "Nesquik", "price": "190 RSD" },
                 { "name": "Mleko", "price": "120 RSD" },
                 { "name": "Čaj", "price": "170 RSD" },
+                { "name": "Premium čaj", "price": "210 RSD" },
                 { "name": "Plazma šejk", "price": "290 RSD" }
             ]
         },
@@ -345,6 +346,7 @@ const menuData = {
                 { "name": "Nesquik", "price": "190 RSD" },
                 { "name": "Milk", "price": "120 RSD" },
                 { "name": "Tea", "price": "170 RSD" },
+                { "name": "Premium tea", "price": "210 RSD" },
                 { "name": "Plazma Shake", "price": "290 RSD" }
             ]
         },
@@ -429,7 +431,8 @@ const menuData = {
                 { "name": "Rosa 0,33l gazirana", "price": "170 RSD" },
                 { "name": "Rosa 0,75l negazirana", "price": "240 RSD" },
                 { "name": "Rosa 0,75l gazirana", "price": "240 RSD" },
-                { "name": "Romerquelle limunska trava 0,33l", "price": "240 RSD" }
+                { "name": "Romerquelle limunska trava 0,33l", "price": "240 RSD" },
+                { "name": "Soda voda 1l", "price": "210 RSD" }
             ]
         },
         {
@@ -439,7 +442,8 @@ const menuData = {
                 { "name": "Rosa 0.33l Sparkling", "price": "170 RSD" },
                 { "name": "Rosa 0.75l Still", "price": "240 RSD" },
                 { "name": "Rosa 0.75l Sparkling", "price": "240 RSD" },
-                { "name": "Romerquelle Lemongrass 0.33l", "price": "240 RSD" }
+                { "name": "Romerquelle Lemongrass 0.33l", "price": "240 RSD" },
+                { "name": "Soda water 1l", "price": "210 RSD" }
             ]
         },
         {
