@@ -252,7 +252,8 @@ const menuData = {
                 { "name": "Bermet crni 0,75l", "price": "2900 RSD" },
                 { "name": "Bermet beli 0,75l", "price": "2900 RSD" },
                 { "name": "Rose 0,75l", "price": "2100 RSD" },
-                { "name": "Grašac beli 0,75l", "price": "2100 RSD" }
+                { "name": "Grašac beli 0,75l", "price": "2100 RSD" },
+                { "name": "Sauvignon Kosović 0,75l", "price": "2700 RSD" }
             ]
         },
         {
@@ -261,7 +262,8 @@ const menuData = {
                 { "name": "Bermet Red 0.75l", "price": "2900 RSD" },
                 { "name": "Bermet White 0.75l", "price": "2900 RSD" },
                 { "name": "Rose 0.75l", "price": "2100 RSD" },
-                { "name": "Grašac White 0.75l", "price": "2100 RSD" }
+                { "name": "Grašac White 0.75l", "price": "2100 RSD" },
+                { "name": "Sauvignon Kosović 0.75l", "price": "2700 RSD" }
             ]
         },
         {
@@ -514,7 +516,6 @@ const menuData = {
         }
     ]
 };
-
 // Toggle Submenu Function
 function toggleSubMenu(menuItem) {
     const submenu = menuItem.querySelector('.submenu');
@@ -630,4 +631,5 @@ function copyWifiKey() {
         });
     });
 }
+
 
