@@ -80,14 +80,18 @@ const menuData = {
             "name": "Akcija",
             "items": [
                 { "name": "Espreso + Cedevita", "price": "280 RSD" },
-                { "name": "Espreso + Krstić šljiva", "price": "290 RSD" }
+                { "name": "Espreso + Starogradska šljiva", "price": "290 RSD" },
+                { "name": "Espreso + medovača", "price": "290 RSD" },
+                { "name": "Vikend akcija medovača", "price": "180 RSD" }
             ]
         },
         {
             "name": "Special Offers",
             "items": [
                 { "name": "Espresso + Cedevita", "price": "280 RSD" },
-                { "name": "Espresso + Krstić Plum", "price": "290 RSD" }
+                { "name": "Espresso + Starogradska Plum", "price": "290 RSD" },
+                { "name": "Espresso + Honey Brandy", "price": "290 RSD" },
+                { "name": "Weekend Special Honey Brandy", "price": "180 RSD" }
             ]
         },
         {
@@ -97,10 +101,12 @@ const menuData = {
                 { "name": "Finlandia vodka 0,03l", "price": "260 RSD" },
                 { "name": "Vinjak 5 0,03l", "price": "260 RSD" },
                 { "name": "Vinjak XO 0,03l", "price": "720 RSD" },
+                { "name": "Starogradski vinjak 0,03l", "price": "250 RSD" },
                 { "name": "Bacardi rum 0,03l", "price": "280 RSD" },
                 { "name": "Jägermeister 0,03l", "price": "290 RSD" },
                 { "name": "Pelinkovac 0,03l", "price": "210 RSD" },
-                { "name": "Džin Zbir 0,03l", "price": "240 RSD" }
+                { "name": "Džin Zbir 0,03l", "price": "240 RSD" },
+                { "name": "Štok 0,03l", "price": "220 RSD" }
             ]
         },
         {
@@ -110,39 +116,45 @@ const menuData = {
                 { "name": "Finlandia Vodka 0.03l", "price": "260 RSD" },
                 { "name": "Brandy 5 0.03l", "price": "260 RSD" },
                 { "name": "Brandy XO 0.03l", "price": "720 RSD" },
+                { "name": "Starogradski Brandy 0.03l", "price": "250 RSD" },
                 { "name": "Bacardi Rum 0.03l", "price": "280 RSD" },
                 { "name": "Jägermeister 0.03l", "price": "290 RSD" },
                 { "name": "Pelinkovac 0.03l", "price": "210 RSD" },
-                { "name": "Gin Zbir 0.03l", "price": "240 RSD" }
+                { "name": "Gin Zbir 0.03l", "price": "240 RSD" },
+                { "name": "Štok 0.03l", "price": "220 RSD" }
             ]
         },
         {
             "name": "Likeri",
             "items": [
                 { "name": "Baileys 0,03l", "price": "310 RSD" },
-                { "name": "Krstić Malina 0,03l", "price": "210 RSD" },
-                { "name": "Krstić Višnja 0,03l", "price": "210 RSD" }
+                { "name": "Starogradska Malina 0,03l", "price": "210 RSD" },
+                { "name": "Starogradska Višnja 0,03l", "price": "210 RSD" },
+                { "name": "Medovača 0,03l", "price": "210 RSD" }
             ]
         },
         {
             "name": "Liqueurs",
             "items": [
                 { "name": "Baileys 0.03l", "price": "310 RSD" },
-                { "name": "Krstić Raspberry 0.03l", "price": "210 RSD" },
-                { "name": "Krstić Sour Cherry 0.03l", "price": "210 RSD" }
+                { "name": "Starogradska Raspberry 0.03l", "price": "210 RSD" },
+                { "name": "Starogradska Sour Cherry 0.03l", "price": "210 RSD" },
+                { "name": "Honey Brandy 0.03l", "price": "210 RSD" }
             ]
         },
         {
             "name": "Rakije",
             "items": [
-                { "name": "Krstić šljiva 0,03l", "price": "210 RSD" },
-                { "name": "Krstić kajsija 0,03l", "price": "220 RSD" },
-                { "name": "Krstić loza 0,03l", "price": "190 RSD" },
-                { "name": "Krstić dunja 0,03l", "price": "220 RSD" },
-                { "name": "Krstić viljamovka 0,03l", "price": "220 RSD" },
-                { "name": "Krstić jabuka 0,03l", "price": "190 RSD" },
-                // { "name": "Krstić malina 0,03l", "price": "210 RSD" },
-                // { "name": "Krstić višnja 0,03l", "price": "210 RSD" },
+                { "name": "Starogradska šljiva 0,03l", "price": "210 RSD" },
+                { "name": "Starogradska kajsija 0,03l", "price": "220 RSD" },
+                { "name": "Starogradska loza 0,03l", "price": "190 RSD" },
+                { "name": "Starogradska dunja 0,03l", "price": "220 RSD" },
+                { "name": "Starogradska viljamovka 0,03l", "price": "220 RSD" },
+                { "name": "Starogradska jabuka 0,03l", "price": "190 RSD" },
+                { "name": "Starogradska žuta dunja 0,03l", "price": "250 RSD" },
+                { "name": "Starogradski kalvados 0,03l", "price": "220 RSD" },
+                // { "name": "Starogradska malina 0,03l", "price": "210 RSD" },
+                // { "name": "Starogradska višnja 0,03l", "price": "210 RSD" },
                 { "name": "Kovilj dunja 0,03l", "price": "320 RSD" },
                 { "name": "Kovilj šljiva 0,03l", "price": "310 RSD" },
                 { "name": "Jelički dukat šljiva 0,03l", "price": "430 RSD" },
@@ -163,14 +175,16 @@ const menuData = {
         {
             "name": "Brandies",
             "items": [
-                { "name": "Krstić Plum 0.03l", "price": "210 RSD" },
-                { "name": "Krstić Apricot 0.03l", "price": "220 RSD" },
-                { "name": "Krstić Grape 0.03l", "price": "190 RSD" },
-                { "name": "Krstić Quince 0.03l", "price": "220 RSD" },
-                { "name": "Krstić Williams Pear 0.03l", "price": "220 RSD" },
-                { "name": "Krstić Apple 0.03l", "price": "190 RSD" },
-                // { "name": "Krstić Raspberry 0.03l", "price": "210 RSD" },
-                // { "name": "Krstić Sour Cherry 0.03l", "price": "210 RSD" },
+                { "name": "Starogradska Plum 0.03l", "price": "210 RSD" },
+                { "name": "Starogradska Apricot 0.03l", "price": "220 RSD" },
+                { "name": "Starogradska Grape 0.03l", "price": "190 RSD" },
+                { "name": "Starogradska Quince 0.03l", "price": "220 RSD" },
+                { "name": "Starogradska Williams Pear 0.03l", "price": "220 RSD" },
+                { "name": "Starogradska Apple 0.03l", "price": "190 RSD" },
+                { "name": "Starogradska Yellow Quince 0.03l", "price": "250 RSD" },
+                { "name": "Starogradski Calvados 0.03l", "price": "220 RSD" },
+                // { "name": "Starogradska Raspberry 0.03l", "price": "210 RSD" },
+                // { "name": "Starogradska Sour Cherry 0.03l", "price": "210 RSD" },
                 { "name": "Kovilj Quince 0.03l", "price": "320 RSD" },
                 { "name": "Kovilj Plum 0.03l", "price": "310 RSD" },
                 { "name": "Jelički Dukat Plum 0.03l", "price": "430 RSD" },
@@ -616,3 +630,4 @@ function copyWifiKey() {
         });
     });
 }
+
