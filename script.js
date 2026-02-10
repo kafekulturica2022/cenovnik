@@ -249,20 +249,20 @@ const menuData = {
         {
             "name": "Buteljke vina",
             "items": [
-                { "name": "Bermet crni 0,75l", "price": "2900 RSD" },
-                { "name": "Bermet beli 0,75l", "price": "2900 RSD" },
-                { "name": "Rose 0,75l", "price": "2100 RSD" },
-                { "name": "Grašac beli 0,75l", "price": "2100 RSD" },
+                { "name": "Bermet crni Kosović 0,75l", "price": "2900 RSD" },
+                { "name": "Bermet beli Kosović 0,75l", "price": "2900 RSD" },
+                { "name": "Rose Kosović 0,75l", "price": "2100 RSD" },
+                { "name": "Grašac beli Kosović 0,75l", "price": "2100 RSD" },
                 { "name": "Sauvignon Kosović 0,75l", "price": "2700 RSD" }
             ]
         },
         {
             "name": "Bottled Wines",
             "items": [
-                { "name": "Bermet Red 0.75l", "price": "2900 RSD" },
-                { "name": "Bermet White 0.75l", "price": "2900 RSD" },
-                { "name": "Rose 0.75l", "price": "2100 RSD" },
-                { "name": "Grašac White 0.75l", "price": "2100 RSD" },
+                { "name": "Bermet Red Kosović 0.75l", "price": "2900 RSD" },
+                { "name": "Bermet White Kosović 0.75l", "price": "2900 RSD" },
+                { "name": "Rose Kosović 0.75l", "price": "2100 RSD" },
+                { "name": "Grašac White Kosović 0.75l", "price": "2100 RSD" },
                 { "name": "Sauvignon Kosović 0.75l", "price": "2700 RSD" }
             ]
         },
@@ -631,5 +631,6 @@ function copyWifiKey() {
         });
     });
 }
+
 
 
