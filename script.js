@@ -74,448 +74,296 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // Menu Data
+
 const menuData = {
-    "categories": [
-        {
-            "name": "Akcija",
-            "items": [
-                { "name": "Espreso + Cedevita", "price": "280 RSD" },
-                { "name": "Espreso + Starogradska šljiva", "price": "290 RSD" },
-                { "name": "Espreso + medovača", "price": "290 RSD" },
-                { "name": "Vikend akcija medovača", "price": "180 RSD" }
-            ]
-        },
-        {
-            "name": "Special Offers",
-            "items": [
-                { "name": "Espresso + Cedevita", "price": "280 RSD" },
-                { "name": "Espresso + Starogradska Plum", "price": "290 RSD" },
-                { "name": "Espresso + Honey Brandy", "price": "290 RSD" },
-                { "name": "Weekend Special Honey Brandy", "price": "180 RSD" }
-            ]
-        },
-        {
-            "name": "Žestoka pića",
-            "items": [
-                { "name": "Tequila 0,03l", "price": "290 RSD" },
-                { "name": "Finlandia vodka 0,03l", "price": "260 RSD" },
-                { "name": "Vinjak 5 0,03l", "price": "260 RSD" },
-                { "name": "Vinjak XO 0,03l", "price": "720 RSD" },
-                { "name": "Starogradski vinjak 0,03l", "price": "250 RSD" },
-                { "name": "Bacardi rum 0,03l", "price": "280 RSD" },
-                { "name": "Jägermeister 0,03l", "price": "290 RSD" },
-                { "name": "Pelinkovac 0,03l", "price": "210 RSD" },
-                { "name": "Džin Zbir 0,03l", "price": "240 RSD" },
-                { "name": "Štok 0,03l", "price": "220 RSD" }
-            ]
-        },
-        {
-            "name": "Aperitifs and Liqueurs",
-            "items": [
-                { "name": "Tequila 0.03l", "price": "290 RSD" },
-                { "name": "Finlandia Vodka 0.03l", "price": "260 RSD" },
-                { "name": "Brandy 5 0.03l", "price": "260 RSD" },
-                { "name": "Brandy XO 0.03l", "price": "720 RSD" },
-                { "name": "Starogradski Brandy 0.03l", "price": "250 RSD" },
-                { "name": "Bacardi Rum 0.03l", "price": "280 RSD" },
-                { "name": "Jägermeister 0.03l", "price": "290 RSD" },
-                { "name": "Pelinkovac 0.03l", "price": "210 RSD" },
-                { "name": "Gin Zbir 0.03l", "price": "240 RSD" },
-                { "name": "Štok 0.03l", "price": "220 RSD" }
-            ]
-        },
-        {
-            "name": "Likeri",
-            "items": [
-                { "name": "Baileys 0,03l", "price": "310 RSD" },
-                { "name": "Starogradska Malina 0,03l", "price": "210 RSD" },
-                { "name": "Starogradska Višnja 0,03l", "price": "210 RSD" },
-                { "name": "Medovača 0,03l", "price": "210 RSD" }
-            ]
-        },
-        {
-            "name": "Liqueurs",
-            "items": [
-                { "name": "Baileys 0.03l", "price": "310 RSD" },
-                { "name": "Starogradska Raspberry 0.03l", "price": "210 RSD" },
-                { "name": "Starogradska Sour Cherry 0.03l", "price": "210 RSD" },
-                { "name": "Honey Brandy 0.03l", "price": "210 RSD" }
-            ]
-        },
-        {
-            "name": "Rakije",
-            "items": [
-                { "name": "Starogradska šljiva 0,03l", "price": "210 RSD" },
-                { "name": "Starogradska kajsija 0,03l", "price": "220 RSD" },
-                { "name": "Starogradska loza 0,03l", "price": "190 RSD" },
-                { "name": "Starogradska dunja 0,03l", "price": "220 RSD" },
-                { "name": "Starogradska viljamovka 0,03l", "price": "220 RSD" },
-                { "name": "Starogradska jabuka 0,03l", "price": "190 RSD" },
-                { "name": "Starogradska žuta dunja 0,03l", "price": "250 RSD" },
-                { "name": "Starogradski kalvados 0,03l", "price": "220 RSD" },
-                // { "name": "Starogradska malina 0,03l", "price": "210 RSD" },
-                // { "name": "Starogradska višnja 0,03l", "price": "210 RSD" },
-                { "name": "Kovilj dunja 0,03l", "price": "320 RSD" },
-                { "name": "Kovilj šljiva 0,03l", "price": "310 RSD" },
-                { "name": "Jelički dukat šljiva 0,03l", "price": "430 RSD" },
-                { "name": "Potpis šljiva 0,03l", "price": "280 RSD" },
-                { "name": "Gorda šljiva 0,03l", "price": "290 RSD" },
-                { "name": "Zarić šljiva 0,03l", "price": "390 RSD" },
-                { "name": "Žuta osa šljiva 0,03l", "price": "260 RSD" },
-                { "name": "Sremica dunja 0,03l", "price": "290 RSD" },
-                { "name": "Sremica šljiva 0,03l", "price": "270 RSD" },
-                { "name": "Sremica kajsija 0,03l", "price": "270 RSD" },
-                { "name": "Sremica kruška 0,03l", "price": "270 RSD" },
-                { "name": "Jezdić Šljiva 0,03l", "price": "320 RSD" },
-                { "name": "Jezdić Dunja 0,03l", "price": "320 RSD" },
-                { "name": "Bukovska Šljiva 0,03l", "price": "290 RSD" },
-                { "name": "Tamjanika loza 0,03l", "price": "270 RSD" }
-            ]
-        },
-        {
-            "name": "Brandies",
-            "items": [
-                { "name": "Starogradska Plum 0.03l", "price": "210 RSD" },
-                { "name": "Starogradska Apricot 0.03l", "price": "220 RSD" },
-                { "name": "Starogradska Grape 0.03l", "price": "190 RSD" },
-                { "name": "Starogradska Quince 0.03l", "price": "220 RSD" },
-                { "name": "Starogradska Williams Pear 0.03l", "price": "220 RSD" },
-                { "name": "Starogradska Apple 0.03l", "price": "190 RSD" },
-                { "name": "Starogradska Yellow Quince 0.03l", "price": "250 RSD" },
-                { "name": "Starogradski Calvados 0.03l", "price": "220 RSD" },
-                // { "name": "Starogradska Raspberry 0.03l", "price": "210 RSD" },
-                // { "name": "Starogradska Sour Cherry 0.03l", "price": "210 RSD" },
-                { "name": "Kovilj Quince 0.03l", "price": "320 RSD" },
-                { "name": "Kovilj Plum 0.03l", "price": "310 RSD" },
-                { "name": "Jelički Dukat Plum 0.03l", "price": "430 RSD" },
-                { "name": "Potpis Plum 0.03l", "price": "280 RSD" },
-                { "name": "Gorda Plum 0.03l", "price": "290 RSD" },
-                { "name": "Zarić Plum 0.03l", "price": "390 RSD" },
-                { "name": "Yellow Wasp Plum 0.03l", "price": "260 RSD" },
-                { "name": "Sremica Quince 0.03l", "price": "290 RSD" },
-                { "name": "Sremica Plum 0.03l", "price": "270 RSD" },
-                { "name": "Sremica Apricot 0.03l", "price": "270 RSD" },
-                { "name": "Sremica Pear 0.03l", "price": "270 RSD" },
-                { "name": "Jezdić Plum 0.03l", "price": "320 RSD" },
-                { "name": "Jezdić Quince 0.03l", "price": "320 RSD" },
-                { "name": "Bukovska Plum 0.03l", "price": "290 RSD" },
-                { "name": "Tamjanika Grape 0.03l", "price": "270 RSD" }
-            ]
-        },
-        {
-            "name": "Vina",
-            "items": [
-                { "name": "Kupinovo vino 0,187l", "price": "320 RSD" },
-                { "name": "Sangria 0,187l", "price": "310 RSD" },
-                { "name": "Knežević belo vino 0,1l", "price": "160 RSD" },
-                { "name": "Knežević belo vino 0,5l", "price": "800 RSD" },
-                { "name": "Knežević belo vino 1L", "price": "1600 RSD" },
-                { "name": "Knežević crno vino 0,1l", "price": "160 RSD" },
-                { "name": "Knežević crno vino 0,5l", "price": "800 RSD" },
-                { "name": "Knežević crno vino 1L", "price": "1600 RSD" },
-                { "name": "Rose Kosović 0,1l", "price": "170 RSD" },
-                { "name": "Rose Kosović 0,5l", "price": "850 RSD" },
-                { "name": "Rose Kosović 1L", "price": "1700 RSD" },
-                { "name": "Grašac Kosović belo 0,1l", "price": "170 RSD" },
-                { "name": "Grašac Kosović belo 0,5l", "price": "850 RSD" },
-                { "name": "Grašac Kosović belo 1L", "price": "1700 RSD" },
-                { "name": "Cabernet Sauvignon 0,187l", "price": "310 RSD" },
-                { "name": "Bambus 0,3l", "price": "240 RSD" },
-                { "name": "Špricer 0,3l", "price": "240 RSD" }
-            ]
-        },
-        {
-            "name": "Wines",
-            "items": [
-                { "name": "Blackberry Wine 0.187l", "price": "320 RSD" },
-                { "name": "Sangria 0.187l", "price": "310 RSD" },
-                { "name": "Knežević White Wine 0.1l", "price": "160 RSD" },
-                { "name": "Knežević White Wine 0.5l", "price": "800 RSD" },
-                { "name": "Knežević White Wine 1L", "price": "1600 RSD" },
-                { "name": "Knežević Red Wine 0.1l", "price": "160 RSD" },
-                { "name": "Knežević Red Wine 0.5l", "price": "800 RSD" },
-                { "name": "Knežević Red Wine 1L", "price": "1600 RSD" },
-                { "name": "Rose Kosović 0.1l", "price": "170 RSD" },
-                { "name": "Rose Kosović 0.5l", "price": "850 RSD" },
-                { "name": "Rose Kosović 1L", "price": "1700 RSD" },
-                { "name": "Grašac Kosović White 0.1l", "price": "170 RSD" },
-                { "name": "Grašac Kosović White 0.5l", "price": "850 RSD" },
-                { "name": "Grašac Kosović White 1L", "price": "1700 RSD" },
-                { "name": "Cabernet Sauvignon 0.187l", "price": "310 RSD" },
-                { "name": "Bambus 0.3l", "price": "240 RSD" },
-                { "name": "Spritzer 0.3l", "price": "240 RSD" }
-            ]
-        },
-        {
-            "name": "Buteljke vina",
-            "items": [
-                { "name": "Bermet crni Kosović 0,75l", "price": "2900 RSD" },
-                { "name": "Bermet beli Kosović 0,75l", "price": "2900 RSD" },
-                { "name": "Rose Kosović 0,75l", "price": "2100 RSD" },
-                { "name": "Grašac beli Kosović 0,75l", "price": "2100 RSD" },
-                { "name": "Sauvignon Kosović 0,75l", "price": "2700 RSD" }
-            ]
-        },
-        {
-            "name": "Bottled Wines",
-            "items": [
-                { "name": "Bermet Red Kosović 0.75l", "price": "2900 RSD" },
-                { "name": "Bermet White Kosović 0.75l", "price": "2900 RSD" },
-                { "name": "Rose Kosović 0.75l", "price": "2100 RSD" },
-                { "name": "Grašac White Kosović 0.75l", "price": "2100 RSD" },
-                { "name": "Sauvignon Kosović 0.75l", "price": "2700 RSD" }
-            ]
-        },
-        {
-            "name": "Piva",
-            "items": [
-                { "name": "Heineken 0,25l", "price": "320 RSD" },
-                { "name": "Bavaria 0,25l", "price": "320 RSD" },
-                { "name": "Zaječarsko 0,33l", "price": "230 RSD" },
-                { "name": "Tuborg 0,33l", "price": "260 RSD" },
-                { "name": "Lav premium 0,33l", "price": "240 RSD" },
-                { "name": "Carlsberg 0,25l", "price": "290 RSD" },
-                { "name": "Zbir 0,5l", "price": "350 RSD" },
-                { "name": "Somersby 0,33l", "price": "290 RSD" }
-            ]
-        },
-        {
-            "name": "Beers",
-            "items": [
-                { "name": "Heineken 0.25l", "price": "320 RSD" },
-                { "name": "Bavaria 0.25l", "price": "320 RSD" },
-                { "name": "Zaječarsko 0.33l", "price": "230 RSD" },
-                { "name": "Tuborg 0.33l", "price": "260 RSD" },
-                { "name": "Lav Premium 0.33l", "price": "240 RSD" },
-                { "name": "Carlsberg 0.25l", "price": "290 RSD" },
-                { "name": "Zbir 0.5l", "price": "350 RSD" },
-                { "name": "Somersby 0.33l", "price": "290 RSD" }
-            ]
-        },
-        {
-            "name": "Točeno pivo",
-            "items": [
-                { "name": "Akira 0,5l", "price": "350 RSD" },
-                { "name": "Akira 0,3l", "price": "300 RSD" },
-                { "name": "Juice Ipa 0,5l", "price": "350 RSD" },
-                { "name": "Juice Ipa 0,3l", "price": "300 RSD" },
-                { "name": "Wartburg 0,5l", "price": "270 RSD" },
-                { "name": "Wartburg 0,3l", "price": "220 RSD" },
-                { "name": "Beogradski fantom 0,5l", "price": "350 RSD" },
-                { "name": "Beogradski fantom 0,3l", "price": "300 RSD" },
-                { "name": "Memento mori 0,5l", "price": "350 RSD" },
-                { "name": "Memento mori 0,3l", "price": "300 RSD" },
-                { "name": "Crni Slager 0,5l", "price": "270 RSD" },
-                { "name": "Crni Slager 0,3l", "price": "220 RSD" },
-                { "name": "Kulturica specijal 0,5l", "price": "230 RSD" },
-                { "name": "Kulturica specijal 0,3l", "price": "190 RSD" }
-            ]
-        },
-        {
-            "name": "Draft Beer",
-            "items": [
-                { "name": "Akira 0.5l", "price": "350 RSD" },
-                { "name": "Akira 0.3l", "price": "300 RSD" },
-                { "name": "Juice IPA 0.5l", "price": "350 RSD" },
-                { "name": "Juice IPA 0.3l", "price": "300 RSD" },
-                { "name": "Wartburg 0.5l", "price": "270 RSD" },
-                { "name": "Wartburg 0.3l", "price": "220 RSD" },
-                { "name": "Belgrade Phantom 0.5l", "price": "350 RSD" },
-                { "name": "Belgrade Phantom 0.3l", "price": "300 RSD" },
-                { "name": "Memento Mori 0.5l", "price": "350 RSD" },
-                { "name": "Memento Mori 0.3l", "price": "300 RSD" },
-                { "name": "Crni Slager 0.5l", "price": "270 RSD" },
-                { "name": "Crni Slager 0.3l", "price": "220 RSD" },
-                { "name": "Kulturica Special 0.5l", "price": "230 RSD" },
-                { "name": "Kulturica Special 0.3l", "price": "190 RSD" }
-            ]
-        },
-        {
-            "name": "Topli napici",
-            "items": [
-                { "name": "Espresso", "price": "170 RSD" },
-                { "name": "Espresso sa mlekom", "price": "180 RSD" },
-                { "name": "Espresso sa sojinim mlekom", "price": "190 RSD" },
-                { "name": "Espresso sa ukusom vanile", "price": "220 RSD" },
-                { "name": "Espresso sa ukusom karamele", "price": "220 RSD" },
-                { "name": "Caffe latte", "price": "210 RSD" },
-                { "name": "Cappuccino", "price": "190 RSD" },
-                { "name": "Nescafe", "price": "190 RSD" },
-                { "name": "Nesquik", "price": "190 RSD" },
-                { "name": "Mleko", "price": "120 RSD" },
-                { "name": "Čaj", "price": "170 RSD" },
-                { "name": "Premium čaj", "price": "210 RSD" },
-                { "name": "Plazma šejk", "price": "290 RSD" }
-            ]
-        },
-        {
-            "name": "Hot Drinks",
-            "items": [
-                { "name": "Espresso", "price": "170 RSD" },
-                { "name": "Espresso with Milk", "price": "180 RSD" },
-                { "name": "Espresso with Soy Milk", "price": "190 RSD" },
-                { "name": "Espresso with Vanilla Flavor", "price": "220 RSD" },
-                { "name": "Espresso with Caramel Flavor", "price": "220 RSD" },
-                { "name": "Caffe Latte", "price": "210 RSD" },
-                { "name": "Cappuccino", "price": "190 RSD" },
-                { "name": "Nescafe", "price": "190 RSD" },
-                { "name": "Nesquik", "price": "190 RSD" },
-                { "name": "Milk", "price": "120 RSD" },
-                { "name": "Tea", "price": "170 RSD" },
-                { "name": "Premium tea", "price": "210 RSD" },
-                { "name": "Plazma Shake", "price": "290 RSD" }
-            ]
-        },
-        {
-            "name": "Sokovi",
-            "items": [
-                { "name": "Coca Cola 0,25l", "price": "220 RSD" },
-                { "name": "Coca Cola zero 0,25l", "price": "230 RSD" },
-                { "name": "Schweppes Bitter Lemon 0,25l", "price": "220 RSD" },
-                { "name": "Schweppes Tonic Water 0,25l", "price": "220 RSD" },
-                { "name": "Schweppes Tangerine 0,25l", "price": "220 RSD" },
-                { "name": "Fanta 0,25l", "price": "220 RSD" },
-                { "name": "Sprite 0,25l", "price": "220 RSD" },
-                { "name": "Multi Sola 0,5l", "price": "240 RSD" },
-                { "name": "Sola Ice Tea 0,5l", "price": "240 RSD" },
-                { "name": "Cocta 0,275l", "price": "220 RSD" },
-                { "name": "Orangina 0,25l", "price": "310 RSD" },
-                { "name": "Sok od jagode 0,2l", "price": "230 RSD" },
-                { "name": "Sok od pomorandže 0,2l", "price": "230 RSD" },
-                { "name": "Sok od jabuke 0,2l", "price": "230 RSD" },
-                { "name": "Sok od breskve 0,2l", "price": "230 RSD" },
-                { "name": "Sok od borovnice 0,2l", "price": "230 RSD" },
-                { "name": "Cedevita 0,25l", "price": "210 RSD" }
-            ]
-        },
-        {
-            "name": "Juices",
-            "items": [
-                { "name": "Coca Cola 0.25l", "price": "220 RSD" },
-                { "name": "Coca Cola Zero 0.25l", "price": "230 RSD" },
-                { "name": "Schweppes Bitter Lemon 0.25l", "price": "220 RSD" },
-                { "name": "Schweppes Tonic Water 0.25l", "price": "220 RSD" },
-                { "name": "Schweppes Tangerine 0.25l", "price": "220 RSD" },
-                { "name": "Fanta 0.25l", "price": "220 RSD" },
-                { "name": "Sprite 0.25l", "price": "220 RSD" },
-                { "name": "Multi Sola 0.5l", "price": "240 RSD" },
-                { "name": "Sola Ice Tea 0.5l", "price": "240 RSD" },
-                { "name": "Cocta 0.275l", "price": "220 RSD" },
-                { "name": "Orangina 0.25l", "price": "310 RSD" },
-                { "name": "Strawberry Juice 0.2l", "price": "230 RSD" },
-                { "name": "Orange Juice 0.2l", "price": "230 RSD" },
-                { "name": "Apple Juice 0.2l", "price": "230 RSD" },
-                { "name": "Peach Juice 0.2l", "price": "230 RSD" },
-                { "name": "Blueberry Juice 0.2l", "price": "230 RSD" },
-                { "name": "Cedevita 0.25l", "price": "210 RSD" }
-            ]
-        },
-        {
-            "name": "Energetska pića",
-            "items": [
-                { "name": "Red Bull lim. 0,25l", "price": "310 RSD" },
-                { "name": "Ultra lim. 0,25l", "price": "210 RSD" }
-            ]
-        },
-        {
-            "name": "Energy Drinks",
-            "items": [
-                { "name": "Red Bull lim. 0.25l", "price": "310 RSD" },
-                { "name": "Ultra lim. 0.25l", "price": "210 RSD" }
-            ]
-        },
-        {
-            "name": "Ceđeni sokovi",
-            "items": [
-                { "name": "Ceđeni limun 0,2l", "price": "190 RSD" },
-                { "name": "Ceđena pomorandža 0,2l", "price": "290 RSD" },
-                { "name": "Ceđeni MIX 0,2l", "price": "290 RSD" }
-            ]
-        },
-        {
-            "name": "Fresh Juices",
-            "items": [
-                { "name": "Fresh Lemon 0.2l", "price": "190 RSD" },
-                { "name": "Fresh Orange 0.2l", "price": "290 RSD" },
-                { "name": "Fresh MIX 0.2l", "price": "290 RSD" }
-            ]
-        },
-        {
-            "name": "Voda",
-            "items": [
-                { "name": "Rosa 0,33l negazirana", "price": "160 RSD" },
-                { "name": "Rosa 0,33l gazirana", "price": "170 RSD" },
-                { "name": "Rosa 0,75l negazirana", "price": "240 RSD" },
-                { "name": "Rosa 0,75l gazirana", "price": "240 RSD" },
-                { "name": "Romerquelle limunska trava 0,33l", "price": "240 RSD" },
-                { "name": "Soda voda 1l", "price": "210 RSD" }
-            ]
-        },
-        {
-            "name": "Water",
-            "items": [
-                { "name": "Rosa 0.33l Still", "price": "160 RSD" },
-                { "name": "Rosa 0.33l Sparkling", "price": "170 RSD" },
-                { "name": "Rosa 0.75l Still", "price": "240 RSD" },
-                { "name": "Rosa 0.75l Sparkling", "price": "240 RSD" },
-                { "name": "Romerquelle Lemongrass 0.33l", "price": "240 RSD" },
-                { "name": "Soda water 1l", "price": "210 RSD" }
-            ]
-        },
-        {
-            "name": "Viski",
-            "items": [
-                { "name": "Jack Daniel's 0,03l", "price": "390 RSD" },
-                { "name": "Jameson 0,03l", "price": "340 RSD" },
-                { "name": "Gentleman Jack 0,03l", "price": "380 RSD" }
-            ]
-        },
-        {
-            "name": "Whiskey",
-            "items": [
-                { "name": "Jack Daniel's 0.03l", "price": "390 RSD" },
-                { "name": "Jameson 0.03l", "price": "340 RSD" },
-                { "name": "Gentleman Jack 0.03l", "price": "380 RSD" }
-            ]
-        },
-        {
-            "name": "Kokteli",
-            "items": [
-                { "name": "Gin Tonic", "price": "380 RSD" },
-                { "name": "Mojito", "price": "420 RSD" },
-                { "name": "Tequila Sunrise", "price": "430 RSD" },
-                { "name": "Cuba Libre", "price": "360 RSD" }
-            ]
-        },
-        {
-            "name": "Cocktails",
-            "items": [
-                { "name": "Gin Tonic", "price": "380 RSD" },
-                { "name": "Mojito", "price": "420 RSD" },
-                { "name": "Tequila Sunrise", "price": "430 RSD" },
-                { "name": "Cuba Libre", "price": "360 RSD" }
-            ]
-        },
-        {
-            "name": "Grickalice",
-            "items": [
-                { "name": "Kikiriki čaša običan", "price": "220 RSD" },
-                { "name": "Kikiriki čaša sweet chilli", "price": "470 RSD" },
-                { "name": "Lešnik čaša beli luk", "price": "470 RSD" },
-                { "name": "Badem čaša slani", "price": "470 RSD" }
-            ]
-        },
-        {
-            "name": "Snacks",
-            "items": [
-                { "name": "Peanuts Regular", "price": "220 RSD" },
-                { "name": "Peanuts Sweet Chilli", "price": "470 RSD" },
-                { "name": "Hazelnuts Garlic", "price": "470 RSD" },
-                { "name": "Almonds Salted", "price": "470 RSD" }
-            ]
-        }
-    ]
+  "categories": [
+    {"name":"Akcija","items":[
+      {"name":"Espreso + Cedevita","price":"340 RSD"},
+      {"name":"Espreso + Starogradska šljiva","price":"340 RSD"},
+      {"name":"Espreso + medovača","price":"340 RSD"}
+    ]},
+    {"name":"Special Offers","items":[
+      {"name":"Espresso + Cedevita","price":"340 RSD"},
+      {"name":"Espresso + Starogradska Plum","price":"340 RSD"},
+      {"name":"Espresso + Honey Brandy","price":"340 RSD"}
+    ]},
+    {"name":"Žestoka pića","items":[
+      {"name":"Tequila 0,03l","price":"290 RSD"},
+      {"name":"Finlandia vodka 0,03l","price":"270 RSD"},
+      {"name":"Vinjak 5 0,03l","price":"280 RSD"},
+      {"name":"Starogradski vinjak 0,03l","price":"250 RSD"},
+      {"name":"Bacardi rum 0,03l","price":"280 RSD"},
+      {"name":"Jägermeister 0,03l","price":"290 RSD"},
+      {"name":"Pelinkovac 0,05l","price":"220 RSD"},
+      {"name":"Džin Zbir 0,03l","price":"260 RSD"},
+      {"name":"Džin Rubin 0,03l","price":"220 RSD"},
+      {"name":"Štok 0,03l","price":"230 RSD"}
+    ]},
+    {"name":"Aperitifs and Liqueurs","items":[
+      {"name":"Tequila 0.03l","price":"290 RSD"},
+      {"name":"Finlandia Vodka 0.03l","price":"270 RSD"},
+      {"name":"Brandy 5 0.03l","price":"280 RSD"},
+      {"name":"Starogradski Brandy 0.03l","price":"250 RSD"},
+      {"name":"Bacardi Rum 0.03l","price":"280 RSD"},
+      {"name":"Jägermeister 0.03l","price":"290 RSD"},
+      {"name":"Pelinkovac 0.05l","price":"220 RSD"},
+      {"name":"Gin Zbir 0.03l","price":"260 RSD"},
+      {"name":"Gin Rubin 0.03l","price":"220 RSD"},
+      {"name":"Štok 0.03l","price":"230 RSD"}
+    ]},
+    {"name":"Likeri","items":[
+      {"name":"Starogradska Malina 0,05l","price":"250 RSD"},
+      {"name":"Starogradska Višnja 0,05l","price":"290 RSD"},
+      {"name":"Starogradska Kalvados 0,03l","price":"240 RSD"},
+      {"name":"Baileys 0,03l","price":"310 RSD"},
+      {"name":"Medovača 0,03l","price":"230 RSD"}
+    ]},
+    {"name":"Liqueurs","items":[
+      {"name":"Starogradska Raspberry 0.05l","price":"250 RSD"},
+      {"name":"Starogradska Sour Cherry 0.05l","price":"290 RSD"},
+      {"name":"Starogradska Calvados 0.03l","price":"240 RSD"},
+      {"name":"Baileys 0.03l","price":"310 RSD"},
+      {"name":"Honey Brandy 0.03l","price":"230 RSD"}
+    ]},
+    {"name":"Rakije","items":[
+      {"name":"Starogradska šljiva 0,03l","price":"240 RSD"},
+      {"name":"Starogradska dunja 0,03l","price":"260 RSD"},
+      {"name":"Starogradska dunja Barrique 0,03l","price":"280 RSD"},
+      {"name":"Starogradska kajsija 0,03l","price":"260 RSD"},
+      {"name":"Starogradska jabuka 0,03l","price":"210 RSD"},
+      {"name":"Starogradska loza 0,03l","price":"210 RSD"},
+      {"name":"Starogradska viljamovka 0,03l","price":"260 RSD"},
+      {"name":"Kovilj šljiva 0,03l","price":"330 RSD"},
+      {"name":"Kovilj dunja 0,03l","price":"330 RSD"},
+      {"name":"Jezdić šljiva 0,03l","price":"320 RSD"},
+      {"name":"Jezdić dunja 0,03l","price":"320 RSD"},
+      {"name":"Jelički dukat šljiva 0,03l","price":"470 RSD"},
+      {"name":"Viljamovka Takovo 0,03l","price":"290 RSD"}
+    ]},
+    {"name":"Brandies","items":[
+      {"name":"Starogradska Plum 0.03l","price":"240 RSD"},
+      {"name":"Starogradska Quince 0.03l","price":"260 RSD"},
+      {"name":"Starogradska Quince Barrique 0.03l","price":"280 RSD"},
+      {"name":"Starogradska Apricot 0.03l","price":"260 RSD"},
+      {"name":"Starogradska Apple 0.03l","price":"210 RSD"},
+      {"name":"Starogradska Grape 0.03l","price":"210 RSD"},
+      {"name":"Starogradska Williams Pear 0.03l","price":"260 RSD"},
+      {"name":"Kovilj Plum 0.03l","price":"330 RSD"},
+      {"name":"Kovilj Quince 0.03l","price":"330 RSD"},
+      {"name":"Jezdić Plum 0.03l","price":"320 RSD"},
+      {"name":"Jezdić Quince 0.03l","price":"320 RSD"},
+      {"name":"Jelički Dukat Plum 0.03l","price":"470 RSD"},
+      {"name":"Takovo Williams Pear 0.03l","price":"290 RSD"}
+    ]},
+    {"name":"Vina","items":[
+      {"name":"Kupinovo vino 0,187l","price":"330 RSD"},
+      {"name":"Sangrija 0,187l","price":"320 RSD"},
+      {"name":"Cabernet Sauvignon 0,187l","price":"320 RSD"},
+      {"name":"Chardonnay 0,187l","price":"270 RSD"},
+      {"name":"Vino belo 0,1l","price":"170 RSD"},
+      {"name":"Vino belo 0,5l","price":"850 RSD"},
+      {"name":"Vino crno 0,1l","price":"170 RSD"},
+      {"name":"Vino crno 0,5l","price":"850 RSD"},
+      {"name":"Rose 0,1l","price":"170 RSD"},
+      {"name":"Rose 0,5l","price":"850 RSD"},
+      {"name":"Bermet beli 0,1l","price":"280 RSD"},
+      {"name":"Bermet crni 0,1l","price":"280 RSD"},
+      {"name":"Vermut 0,1l","price":"210 RSD"},
+      {"name":"Špricer 0,4l","price":"240 RSD"},
+      {"name":"Bambus 0,4l","price":"240 RSD"}
+    ]},
+    {"name":"Wines","items":[
+      {"name":"Blackberry Wine 0.187l","price":"330 RSD"},
+      {"name":"Sangria 0.187l","price":"320 RSD"},
+      {"name":"Cabernet Sauvignon 0.187l","price":"320 RSD"},
+      {"name":"Chardonnay 0.187l","price":"270 RSD"},
+      {"name":"White Wine 0.1l","price":"170 RSD"},
+      {"name":"White Wine 0.5l","price":"850 RSD"},
+      {"name":"Red Wine 0.1l","price":"170 RSD"},
+      {"name":"Red Wine 0.5l","price":"850 RSD"},
+      {"name":"Rosé 0.1l","price":"170 RSD"},
+      {"name":"Rosé 0.5l","price":"850 RSD"},
+      {"name":"White Bermet 0.1l","price":"280 RSD"},
+      {"name":"Red Bermet 0.1l","price":"280 RSD"},
+      {"name":"Vermouth 0.1l","price":"210 RSD"},
+      {"name":"Spritzer 0.4l","price":"240 RSD"},
+      {"name":"Bambus 0.4l","price":"240 RSD"}
+    ]},
+    {"name":"Piva","items":[
+      {"name":"Heineken 0,25l","price":"340 RSD"},
+      {"name":"Bavaria 0,25l","price":"340 RSD"},
+      {"name":"Tuborg 0,33l","price":"260 RSD"},
+      {"name":"Lav premium 0,33l","price":"240 RSD"},
+      {"name":"Jelen 0,33l","price":"260 RSD"},
+      {"name":"Somersby 0,33l","price":"310 RSD"}
+    ]},
+    {"name":"Beers","items":[
+      {"name":"Heineken 0.25l","price":"340 RSD"},
+      {"name":"Bavaria 0.25l","price":"340 RSD"},
+      {"name":"Tuborg 0.33l","price":"260 RSD"},
+      {"name":"Lav Premium 0.33l","price":"240 RSD"},
+      {"name":"Jelen 0.33l","price":"260 RSD"},
+      {"name":"Somersby 0.33l","price":"310 RSD"}
+    ]},
+    {"name":"Točeno pivo","items":[
+      {"name":"Juice IPA 0,33l","price":"320 RSD"},
+      {"name":"Juice IPA 0,5l","price":"370 RSD"},
+      {"name":"Beogradski fantom 0,33l","price":"300 RSD"},
+      {"name":"Beogradski fantom 0,5l","price":"350 RSD"},
+      {"name":"Memento Mori 0,33l","price":"300 RSD"},
+      {"name":"Memento Mori 0,5l","price":"350 RSD"},
+      {"name":"Wartburg 0,33l","price":"220 RSD"},
+      {"name":"Wartburg 0,5l","price":"270 RSD"},
+      {"name":"Akira 0,33l","price":"300 RSD"},
+      {"name":"Akira 0,5l","price":"350 RSD"},
+      {"name":"Kulturica specijal 0,33l","price":"210 RSD"},
+      {"name":"Kulturica specijal 0,5l","price":"260 RSD"}
+    ]},
+    {"name":"Draft Beer","items":[
+      {"name":"Juice IPA 0.33l","price":"320 RSD"},
+      {"name":"Juice IPA 0.5l","price":"370 RSD"},
+      {"name":"Belgrade Phantom 0.33l","price":"300 RSD"},
+      {"name":"Belgrade Phantom 0.5l","price":"350 RSD"},
+      {"name":"Memento Mori 0.33l","price":"300 RSD"},
+      {"name":"Memento Mori 0.5l","price":"350 RSD"},
+      {"name":"Wartburg 0.33l","price":"220 RSD"},
+      {"name":"Wartburg 0.5l","price":"270 RSD"},
+      {"name":"Akira 0.33l","price":"300 RSD"},
+      {"name":"Akira 0.5l","price":"350 RSD"},
+      {"name":"Kulturica Special 0.33l","price":"210 RSD"},
+      {"name":"Kulturica Special 0.5l","price":"260 RSD"}
+    ]},
+    {"name":"Topli napici","items":[
+      {"name":"Espresso","price":"180 RSD"},
+      {"name":"Espresso sa mlekom","price":"190 RSD"},
+      {"name":"Espresso sa sojinim mlekom","price":"220 RSD"},
+      {"name":"Espresso sa vanilom","price":"220 RSD"},
+      {"name":"Espresso karamela","price":"220 RSD"},
+      {"name":"Domaća kafa","price":"140 RSD"},
+      {"name":"Nes kafa","price":"210 RSD"},
+      {"name":"Nes sa sojinim mlekom","price":"240 RSD"},
+      {"name":"Caffe latte","price":"230 RSD"},
+      {"name":"Cappuccino","price":"200 RSD"},
+      {"name":"Topla čokolada","price":"230 RSD"},
+      {"name":"Nesquik","price":"190 RSD"},
+      {"name":"Plazma šejk","price":"290 RSD"},
+      {"name":"Mleko","price":"140 RSD"},
+      {"name":"Premium čaj","price":"210 RSD"}
+    ]},
+    {"name":"Hot Drinks","items":[
+      {"name":"Espresso","price":"180 RSD"},
+      {"name":"Espresso with Milk","price":"190 RSD"},
+      {"name":"Espresso with Soy Milk","price":"220 RSD"},
+      {"name":"Espresso with Vanilla","price":"220 RSD"},
+      {"name":"Espresso Caramel","price":"220 RSD"},
+      {"name":"Turkish Coffee","price":"140 RSD"},
+      {"name":"Instant Coffee","price":"210 RSD"},
+      {"name":"Instant Coffee with Soy Milk","price":"240 RSD"},
+      {"name":"Caffe Latte","price":"230 RSD"},
+      {"name":"Cappuccino","price":"200 RSD"},
+      {"name":"Hot Chocolate","price":"230 RSD"},
+      {"name":"Nesquik","price":"190 RSD"},
+      {"name":"Plazma Shake","price":"290 RSD"},
+      {"name":"Milk","price":"140 RSD"},
+      {"name":"Premium Tea","price":"210 RSD"}
+    ]},
+    {"name":"Sokovi","items":[
+      {"name":"Coca Cola 0,25l","price":"240 RSD"},
+      {"name":"Coca Cola zero 0,25l","price":"250 RSD"},
+      {"name":"Schweppes Bitter Lemon 0,25l","price":"240 RSD"},
+      {"name":"Schweppes Tonic 0,25l","price":"240 RSD"},
+      {"name":"Schweppes Tangerina 0,25l","price":"240 RSD"},
+      {"name":"Schweppes Grejp 0,25l","price":"240 RSD"},
+      {"name":"Fanta 0,25l","price":"240 RSD"},
+      {"name":"Sprite 0,25l","price":"240 RSD"},
+      {"name":"Cocta 0,275l","price":"240 RSD"},
+      {"name":"Orangina 0,25l","price":"310 RSD"},
+      {"name":"Jagoda 0,2l","price":"240 RSD"},
+      {"name":"Pomorandža 0,2l","price":"240 RSD"},
+      {"name":"Jabuka 0,2l","price":"240 RSD"},
+      {"name":"Breskva 0,2l","price":"240 RSD"},
+      {"name":"Borovnica 0,2l","price":"240 RSD"},
+      {"name":"Cedevita 0,2l","price":"220 RSD"},
+      {"name":"Multi Sola 0,5l","price":"240 RSD"},
+      {"name":"Sola Ice Tea 0,5l","price":"240 RSD"}
+    ]},
+    {"name":"Juices","items":[
+      {"name":"Coca Cola 0.25l","price":"240 RSD"},
+      {"name":"Coca Cola Zero 0.25l","price":"250 RSD"},
+      {"name":"Schweppes Bitter Lemon 0.25l","price":"240 RSD"},
+      {"name":"Schweppes Tonic 0.25l","price":"240 RSD"},
+      {"name":"Schweppes Tangerine 0.25l","price":"240 RSD"},
+      {"name":"Schweppes Grapefruit 0.25l","price":"240 RSD"},
+      {"name":"Fanta 0.25l","price":"240 RSD"},
+      {"name":"Sprite 0.25l","price":"240 RSD"},
+      {"name":"Cocta 0.275l","price":"240 RSD"},
+      {"name":"Orangina 0.25l","price":"310 RSD"},
+      {"name":"Strawberry Juice 0.2l","price":"240 RSD"},
+      {"name":"Orange Juice 0.2l","price":"240 RSD"},
+      {"name":"Apple Juice 0.2l","price":"240 RSD"},
+      {"name":"Peach Juice 0.2l","price":"240 RSD"},
+      {"name":"Blueberry Juice 0.2l","price":"240 RSD"},
+      {"name":"Cedevita 0.2l","price":"220 RSD"},
+      {"name":"Multi Sola 0.5l","price":"240 RSD"},
+      {"name":"Sola Ice Tea 0.5l","price":"240 RSD"}
+    ]},
+    {"name":"Energetska pića","items":[
+      {"name":"Red Bull 0,25l","price":"310 RSD"},
+      {"name":"Ultra 0,25l","price":"210 RSD"}
+    ]},
+    {"name":"Energy Drinks","items":[
+      {"name":"Red Bull 0.25l","price":"310 RSD"},
+      {"name":"Ultra 0.25l","price":"210 RSD"}
+    ]},
+    {"name":"Ceđeni sokovi","items":[
+      {"name":"Limunada 0,3l","price":"210 RSD"},
+      {"name":"Ceđena pomorandža 0,3l","price":"310 RSD"},
+      {"name":"Ceđeni MIX 0,3l","price":"320 RSD"}
+    ]},
+    {"name":"Fresh Juices","items":[
+      {"name":"Lemonade 0.3l","price":"210 RSD"},
+      {"name":"Fresh Orange 0.3l","price":"310 RSD"},
+      {"name":"Fresh MIX 0.3l","price":"320 RSD"}
+    ]},
+    {"name":"Voda","items":[
+      {"name":"Rosa negazirana 0,33l","price":"170 RSD"},
+      {"name":"Rosa gazirana 0,33l","price":"180 RSD"},
+      {"name":"Rosa negazirana 0,75l","price":"250 RSD"},
+      {"name":"Rosa gazirana 0,75l","price":"260 RSD"},
+      {"name":"Limunska trava 0,33l","price":"240 RSD"},
+      {"name":"Soda 0,2l","price":"50 RSD"},
+      {"name":"Soda 1l","price":"220 RSD"}
+    ]},
+    {"name":"Water","items":[
+      {"name":"Rosa Still 0.33l","price":"170 RSD"},
+      {"name":"Rosa Sparkling 0.33l","price":"180 RSD"},
+      {"name":"Rosa Still 0.75l","price":"250 RSD"},
+      {"name":"Rosa Sparkling 0.75l","price":"260 RSD"},
+      {"name":"Lemongrass Water 0.33l","price":"240 RSD"},
+      {"name":"Soda Water 0.2l","price":"50 RSD"},
+      {"name":"Soda Water 1l","price":"220 RSD"}
+    ]},
+    {"name":"Viski","items":[
+      {"name":"Jack Daniel's 0,03l","price":"410 RSD"},
+      {"name":"Jameson 0,03l","price":"370 RSD"},
+      {"name":"Chivas 0,03l","price":"480 RSD"}
+    ]},
+    {"name":"Whiskey","items":[
+      {"name":"Jack Daniel's 0.03l","price":"410 RSD"},
+      {"name":"Jameson 0.03l","price":"370 RSD"},
+      {"name":"Chivas 0.03l","price":"480 RSD"}
+    ]},
+    {"name":"Grickalice","items":[
+      {"name":"Kikiriki slani","price":"270 RSD"},
+      {"name":"Kikiriki Sweet Chilli","price":"490 RSD"}
+    ]},
+    {"name":"Snacks","items":[
+      {"name":"Salted Peanuts","price":"270 RSD"},
+      {"name":"Sweet Chilli Peanuts","price":"490 RSD"}
+    ]}
+  ]
 };
+
 // Toggle Submenu Function
 function toggleSubMenu(menuItem) {
     const submenu = menuItem.querySelector('.submenu');
