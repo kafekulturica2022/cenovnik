@@ -7,7 +7,6 @@ function changeLanguage(language, action) {
         document.getElementById('likeriText').innerText = 'Liqueurs';
         document.getElementById('rakijeText').innerText = 'Brandies';
         document.getElementById('vinaText').innerText = 'Wines';
-        document.getElementById('buteljkeText').innerText = 'Bottled Wines';
         document.getElementById('pivaText').innerText = 'Beers';
         document.getElementById('tocenopivoText').innerText = 'Draft Beer';
         document.getElementById('toplinapiciText').innerText = 'Hot Drinks';
@@ -17,6 +16,7 @@ function changeLanguage(language, action) {
         document.getElementById('vodaText').innerText = 'Water';
         document.getElementById('viskiText').innerText = 'Whiskey';
         document.getElementById('kokteliText').innerText = 'Cocktails';
+        document.getElementById('bezalkoholniKokteliText').innerText = 'Non-Alcoholic Cocktails';
         document.getElementById('grickaliceText').innerText = 'Snacks';
         document.getElementById('digmeni').innerText = 'Digital Menu';
         document.getElementById('napomena').innerHTML = '<strong>Note:</strong> <em>Prices are in Serbian Dinars (RSD).</em>';
@@ -28,7 +28,6 @@ function changeLanguage(language, action) {
         document.getElementById('likeriText').innerText = 'Likeri';
         document.getElementById('rakijeText').innerText = 'Rakije';
         document.getElementById('vinaText').innerText = 'Vina';
-        document.getElementById('buteljkeText').innerText = 'Buteljke vina';
         document.getElementById('pivaText').innerText = 'Piva';
         document.getElementById('tocenopivoText').innerText = 'Točeno pivo';
         document.getElementById('toplinapiciText').innerText = 'Topli napici';
@@ -38,6 +37,7 @@ function changeLanguage(language, action) {
         document.getElementById('vodaText').innerText = 'Voda';
         document.getElementById('viskiText').innerText = 'Viski';
         document.getElementById('kokteliText').innerText = 'Kokteli';
+        document.getElementById('bezalkoholniKokteliText').innerText = 'Bezalkoholni kokteli';
         document.getElementById('grickaliceText').innerText = 'Grickalice';
         document.getElementById('digmeni').innerText = 'Digitalni Meni';
         document.getElementById('napomena').innerHTML = '<strong>Napomena:</strong> <em>Cene su izražene u dinarima (RSD).</em>';
@@ -353,6 +353,40 @@ const menuData = {
       {"name":"Jameson 0.03l","price":"370 RSD"},
       {"name":"Chivas 0.03l","price":"480 RSD"}
     ]},
+    {"name":"Kokteli","items":[
+      {"name":"Džin tonik","desc":"Džin · Tonik · Limeta","price":"410 RSD"},
+      {"name":"Mojito","desc":"Beli rum · Nana · Limeta · Smeđi šećer · Soda","price":"440 RSD"},
+      {"name":"Tekila sunrise","desc":"Tekila · Sok od pomorandže · Grenadin","price":"460 RSD"},
+      {"name":"Cuba libre","desc":"Beli rum · Coca-Cola · Limeta","price":"410 RSD"},
+      {"name":"Skinny Bitch","desc":"Vodka · Kisela voda · Limeta","price":"420 RSD"},
+      {"name":"Blue Lagoon","desc":"Vodka · Blue Curaçao · Sprite · Limeta","price":"460 RSD"},
+      {"name":"Aperol spritz","desc":"Aperol · Proseko · Soda · Pomorandža","price":"440 RSD"}
+    ]},
+    {"name":"Cocktails","items":[
+      {"name":"Gin and Tonic","desc":"Gin · Tonic · Lime","price":"410 RSD"},
+      {"name":"Mojito","desc":"White rum · Mint · Lime · Brown sugar · Soda","price":"440 RSD"},
+      {"name":"Tequila Sunrise","desc":"Tequila · Orange juice · Grenadine","price":"460 RSD"},
+      {"name":"Cuba Libre","desc":"White rum · Coca-Cola · Lime","price":"410 RSD"},
+      {"name":"Skinny Bitch","desc":"Vodka · Soda water · Lime","price":"420 RSD"},
+      {"name":"Blue Lagoon","desc":"Vodka · Blue Curaçao · Sprite · Lime","price":"460 RSD"},
+      {"name":"Aperol Spritz","desc":"Aperol · Prosecco · Soda · Orange","price":"440 RSD"}
+    ]},
+    {"name":"Bezalkoholni kokteli","items":[
+      {"name":"Virgin Mojito","desc":"Nana · Limeta · Smeđi šećer · Soda","price":"360 RSD"},
+      {"name":"San Francisco","desc":"Pomorandža · Ananas · Breskva · Grenadin","price":"360 RSD"},
+      {"name":"Blue Lemon","desc":"Blue Curaçao sirup · Sprite · Limeta","price":"370 RSD"},
+      {"name":"Tropical Sunset","desc":"Ananas · Pomorandža · Grenadin","price":"360 RSD"},
+      {"name":"Green Fresh","desc":"Jabuka · Nana · Limeta · Soda","price":"360 RSD"},
+      {"name":"Cherry Fizz","desc":"Sirup od višnje · Limun · Kisela voda","price":"340 RSD"}
+    ]},
+    {"name":"Non-Alcoholic Cocktails","items":[
+      {"name":"Virgin Mojito","desc":"Mint · Lime · Brown sugar · Soda","price":"360 RSD"},
+      {"name":"San Francisco","desc":"Orange · Pineapple · Peach · Grenadine","price":"360 RSD"},
+      {"name":"Blue Lemon","desc":"Blue Curaçao syrup · Sprite · Lime","price":"370 RSD"},
+      {"name":"Tropical Sunset","desc":"Pineapple · Orange · Grenadine","price":"360 RSD"},
+      {"name":"Green Fresh","desc":"Apple · Mint · Lime · Soda","price":"360 RSD"},
+      {"name":"Cherry Fizz","desc":"Cherry syrup · Lemon · Soda water","price":"340 RSD"}
+    ]},
     {"name":"Grickalice","items":[
       {"name":"Kikiriki slani","price":"270 RSD"},
       {"name":"Kikiriki Sweet Chilli","price":"490 RSD"}
@@ -440,6 +474,13 @@ function generateSubMenu(category, submenuContainer) {
 
         itemInfo.appendChild(itemName);
 
+        if (item.desc) {
+            const itemDesc = document.createElement('p');
+            itemDesc.classList.add('item-desc');
+            itemDesc.textContent = item.desc;
+            itemInfo.appendChild(itemDesc);
+        }
+
         const itemPrice = document.createElement('p');
         itemPrice.classList.add('item-price');
         itemPrice.textContent = item.price;
@@ -454,29 +495,26 @@ function generateSubMenu(category, submenuContainer) {
 // Copy WiFi Key Function
 function copyWifiKey() {
     const wifiKey = document.getElementById('wifiKey').textContent;
+    const language = localStorage.getItem('selectedLanguage') || 'sr';
+    const message = language === 'en' ? 'Copied!' : 'Uspešno kopirano!';
 
-    navigator.clipboard.writeText(wifiKey).then(() => {
-        toastr.success('Uspešno kopirano!', '', {
+    const showCopied = () => {
+        toastr.success(message, '', {
             positionClass: 'toast-top-center',
             timeOut: 2000,
             closeButton: false,
             progressBar: true
         });
-    }).catch(() => {
-        // Fallback method
+    };
+
+    navigator.clipboard.writeText(wifiKey).then(showCopied).catch(() => {
         const textArea = document.createElement("textarea");
         textArea.value = wifiKey;
         document.body.appendChild(textArea);
         textArea.select();
         document.execCommand('copy');
         document.body.removeChild(textArea);
-
-        toastr.success('Uspešno kopirano!', '', {
-            positionClass: 'toast-top-center',
-            timeOut: 2000,
-            closeButton: false,
-            progressBar: true
-        });
+        showCopied();
     });
 }
 
