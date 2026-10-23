@@ -361,6 +361,13 @@ body {
     color: var(--primary-color);
 }
 
+.item-desc {
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--text-light);
+    line-height: 1.35;
+}
+
 .item-price {
     font-size: 18px;
     font-weight: 700;
@@ -498,6 +505,10 @@ body {
     /* Items Mobile */
     .item {
         font-size: 14px;
+    }
+
+    .item-desc {
+        font-size: 11px;
     }
     
     .item-price {
